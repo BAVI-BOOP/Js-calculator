@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  width: 95vw;
+  height: 80vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.background {
+  background-image: url(./images/iphone.png);
+  background-repeat: no-repeat;
+  width: 65rem;
+  height: 70rem;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  transform: translateY(5rem);
+
+}
+
+.container {
+  width: 19.5rem;
+  height: 20rem;
+  margin: auto;
+
+}
+
+.buttons {
+  display: grid;
+  grid-template-areas:
+    "a b c d"
+    "e f g h"
+    "i j k l"
+    "m n o p"
+    "q q r s";
+  gap: 1rem;
+
+
+}
+
+.item {
+  background-color: #313131;
+  border-radius: 3rem;
+  color: white;
+  font-family: Helvetica;
+  font-size: 1rem;
+  padding: 1.2rem 1.3rem;
+
+
+}
+
+.item1 {
+  grid-area: a;
+  font-size: 1.3rem;
+  background-color: rgb(134, 130, 130);
+}
+
+.item2 {
+  grid-area: b;
+  background-color: rgb(134, 130, 130);
+}
+
+.item3 {
+  grid-area: c;
+  background-color: rgb(134, 130, 130);
+}
+
+.item4 {
+  grid-area: d;
+  background-color: #f69a06;
+
+}
+
+.item5 {
+  grid-area: e;
+}
+
+.item6 {
+  grid-area: f;
+}
+
+.item7 {
+  grid-area: g;
+}
+
+.item8 {
+  grid-area: h;
+  background-color: #f69a06;
+  padding: 1rem 1.5rem;
+}
+
+.item9 {
+  grid-area: i;
+}
+
+.item10 {
+  grid-area: j;
+}
+
+.item11 {
+  grid-area: k;
+}
+
+.item12 {
+  grid-area: l;
+  background-color: #f69a06;
+
+}
+
+.item13 {
+  grid-area: m;
+}
+
+.item14 {
+  grid-area: n;
+}
+
+.item15 {
+  grid-area: o;
+}
+
+.item16 {
+  grid-area: p;
+  background-color: #f69a06;
+
+}
+
+.item17 {
+  grid-area: q;
+  text-align: left;
+}
+
+.item18 {
+  grid-area: r;
+}
+
+.item19 {
+  grid-area: s;
+  background-color: #f69a06;
+
+}
+.item02 {
+  visibility: hidden;  
+}
+.item01 {
+  visibility: hidden;
+}
+.item03 {
+  visibility: hidden;
+}
+
+.zero {
+  background-color: transparent;
+  border-radius: 3rem;
+  color: white;
+
+  font-family: Helvetica;
+  font-size: 1rem;
+}
+
+#result {
+  color: white;
+  font-size: 4rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  float: right;
+
+}
+
+/* as */
+
+.item5,
+.item6,
+.item7,
+.item9,
+.item10,
+.item11,
+.item13,
+.item14,
+.item15,
+.item17,
+.item18 {
+  box-shadow: 0 2px 4px darkslategray;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.item5:active,
+.item6:active,
+.item7:active,
+.item9:active,
+.item10:active,
+.item11:active,
+.item13:active,
+.item14:active,
+.item15:active,
+.item17:active,
+.item18:active {
+  background-color: #575d5f;
+  box-shadow: 0 0 2px darkslategray;
+  transform: translateY(2px);
+}
+
+/* orange buttons */
+.item1,
+.item2,
+.item3 {
+  box-shadow: 0 2px 4px darkslategray;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.item1:active,
+.item2:active,
+.item3:active {
+  background-color: #575d5f;
+  box-shadow: 0 0 2px darkslategray;
+  transform: translateY(2px);
+}
+
+/* orange buttons */
+.item4,
+.item8,
+.item12,
+.item16,
+.item19 {
+  box-shadow: 0 2px 4px darkslategray;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.item4:active,
+.item8:active,
+.item12:active,
+.item16:active,
+.item19:active {
+  background-color: #575d5f;
+  box-shadow: 0 0 2px darkslategray;
+  transform: translateY(2px);
+}
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 9px;
+  }
+}
