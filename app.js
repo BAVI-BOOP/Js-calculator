@@ -105,10 +105,11 @@ function percent() {
       numberList[i] === "+"
     ) {
       index = i;
+      numberList.splice(index, 1);
     }
   }
-  numberList.splice(index, 1);
-  let num = Number(numberList.join("")) / 100;
+  
+  let num = Number(numberList.join("")).toFixed(2) / 100;
   result.textContent = num;
 }
 percentage.addEventListener("click", percent);
