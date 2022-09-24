@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -310,4 +313,18 @@ body {
   html {
     font-size: 9px;
   }
+}
+
+i {
+  color:white;
+}
+
+.anan {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-9rem);
+}
+
+#MyClockDisplay {
+  font-family: 'Nunito', sans-serif;
 }
