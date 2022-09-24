@@ -5,18 +5,30 @@ let deleteOne = document.getElementById("delete");
 let deleteAll = document.getElementById("clear");
 let percentage = document.getElementById("percent");
 
-
 let font = 4;
+
+
+// && !result.textContent.split('').includes('.')
+
 function displayOnScreen(event) {
-  if (result.textContent == "0" && event.target.textContent == "0") {
+  if (event.target.textContent === "." && result.textContent == "0") {
+    result.textContent = "0.";
+  }
+  if (
+    result.textContent == "0" &&
+    event.target.textContent == "0" &&
+    !result.textContent == "0."
+  ) {
     return;
   }
-  if (result.textContent.split("")[0] == "0" && result.textContent.split("")[result.textContent.split("").length - 1] == "0") {
+  if (
+    result.textContent.split("")[0] == "0" &&
+    result.textContent.split("")[result.textContent.split("").length - 1] ==
+      "0" &&
+    result.textContent.split("")[1] !== "."
+  ) {
     result.textContent = "";
   }
-
-
-  font -= 0.15;
 
   result.style.fontSize = `${font}rem`;
   let lastEntry =
@@ -26,11 +38,13 @@ function displayOnScreen(event) {
     (lastEntry === "x" ||
       lastEntry === "÷" ||
       lastEntry === "-" ||
-      lastEntry === "+") &&
+      lastEntry === "+" ||
+      lastEntry === ".") &&
     (event.target.textContent === "x" ||
       event.target.textContent === "÷" ||
       event.target.textContent === "-" ||
-      event.target.textContent === "+")
+      event.target.textContent === "+" ||
+      event.target.textContent === ".")
   ) {
     let newList = Array.from(result.textContent);
     newList.pop();
@@ -39,6 +53,7 @@ function displayOnScreen(event) {
     return;
   }
   result.textContent += event.target.textContent;
+  font -= 0.15;
 }
 
 number.forEach((numBtn) => numBtn.addEventListener("click", displayOnScreen));
@@ -57,6 +72,7 @@ function operate() {
 
   let myresult = Function("return " + string)();
   result.innerText = myresult;
+
 }
 
 equal.addEventListener("click", operate);
@@ -73,6 +89,7 @@ deleteOne.addEventListener("click", del);
 
 function clear() {
   result.textContent = "0";
+  font = 4;
 }
 
 deleteAll.addEventListener("click", clear);
@@ -90,43 +107,39 @@ function percent() {
       index = i;
     }
   }
-  numberList.splice(index,1)
-  let num = Number(numberList.join('')) / 100;
+  numberList.splice(index, 1);
+  let num = Number(numberList.join("")) / 100;
   result.textContent = num;
 }
 percentage.addEventListener("click", percent);
 
-
-
-
 // TİME
 
-function showTime(){
+function showTime() {
   var date = new Date();
   var h = date.getHours(); // 0 - 23
   var m = date.getMinutes(); // 0 - 59
   var s = date.getSeconds(); // 0 - 59
   var session = "AM";
-  
-  if(h == 0){
-      h = 12;
+
+  if (h == 0) {
+    h = 12;
   }
-  
-  if(h > 12){
-      h = h - 12;
-      session = "PM";
+
+  if (h > 12) {
+    h = h - 12;
+    session = "PM";
   }
-  
-  h = (h < 10) ? "0" + h : h;
-  m = (m < 10) ? "0" + m : m;
-  s = (s < 10) ? "0" + s : s;
-  
+
+  h = h < 10 ? "0" + h : h;
+  m = m < 10 ? "0" + m : m;
+  s = s < 10 ? "0" + s : s;
+
   var time = h + ":" + m + ":" + s + " " + session;
   document.getElementById("MyClockDisplay").innerText = time;
   document.getElementById("MyClockDisplay").textContent = time;
-  
+
   setTimeout(showTime, 1000);
-  
 }
 
 showTime();
