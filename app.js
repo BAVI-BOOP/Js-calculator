@@ -7,7 +7,6 @@ let percentage = document.getElementById("percent");
 
 let font = 4;
 
-
 // && !result.textContent.split('').includes('.')
 
 function displayOnScreen(event) {
@@ -30,7 +29,6 @@ function displayOnScreen(event) {
     result.textContent = "";
   }
 
-  
   let lastEntry =
     result.textContent.split("")[result.textContent.split("").length - 1];
   console.log(lastEntry);
@@ -75,8 +73,7 @@ function operate() {
   let string = list.join("");
 
   let myresult = Function("return " + string)();
-  result.innerText = myresult;
-
+  result.innerText = myresult.toFixed(3);
 }
 
 equal.addEventListener("click", operate);
@@ -112,7 +109,7 @@ function percent() {
       numberList.splice(index, 1);
     }
   }
-  
+
   let num = Number(numberList.join("")).toFixed(2) / 100;
   result.textContent = num;
 }
