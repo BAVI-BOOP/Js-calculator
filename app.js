@@ -73,7 +73,11 @@ function operate() {
   let string = list.join("");
 
   let myresult = Function("return " + string)();
-  result.innerText = myresult.toFixed(3);
+  if (myresult % 1 == 0) {
+    result.innerText = myresult;
+  } else {
+    result.innerText = myresult.toFixed(2);
+  }
 }
 
 equal.addEventListener("click", operate);
