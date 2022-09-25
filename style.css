@@ -299,19 +299,19 @@ body {
 
 @media screen and (max-width: 600px) {
   html {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width: 500px) {
   html {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
 @media screen and (max-width: 400px) {
   html {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 

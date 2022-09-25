@@ -30,7 +30,7 @@ function displayOnScreen(event) {
     result.textContent = "";
   }
 
-  result.style.fontSize = `${font}rem`;
+  
   let lastEntry =
     result.textContent.split("")[result.textContent.split("").length - 1];
   console.log(lastEntry);
@@ -54,6 +54,10 @@ function displayOnScreen(event) {
   }
   result.textContent += event.target.textContent;
   font -= 0.15;
+  if (font < 1.4) {
+    font += 0.15;
+  }
+  result.style.fontSize = `${font}rem`;
 }
 
 number.forEach((numBtn) => numBtn.addEventListener("click", displayOnScreen));
