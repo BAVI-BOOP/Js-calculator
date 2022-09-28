@@ -38,7 +38,7 @@ parallax-website(folder)
 
 ## Screenshot
 <p align="center">
-<a href="https://bavi-boop.github.io/Js-calculator/"><img src="calculator" alt="screenshot"></a>
+<a href="https://bavi-boop.github.io/Js-calculator/"><img src="calculator.gif" alt="screenshot"></a>
 </p>
 
 
