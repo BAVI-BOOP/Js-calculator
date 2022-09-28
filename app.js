@@ -114,7 +114,7 @@ function percent() {
     }
   }
 
-  let num = Number(numberList.join("")).toFixed(2) / 100;
+  let num = (Number(numberList.join("")) / 100).toFixed(5);
   result.textContent = num;
 }
 percentage.addEventListener("click", percent);
