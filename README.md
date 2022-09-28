@@ -58,8 +58,6 @@ parallax-website(folder)
 - JS DOM Manipulation
 
 
--
-
 ## Notes
 
 - You can use HTML,and CSS to complete this project.
